@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Loan Calculator | Deepam Financial Services</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/loan-calculator.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         LOAN CALCULATOR
+    =========================================== -->
+
+    <section style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+
+        <div class="emi-calculator">
+            <div class="emi-inputs">
+
+                <div class="emi-input-group">
+                    <div class="emi-input-label-row">
+                        <label for="emiLoanAmount">Loan Amount</label>
+                        <span id="emiLoanAmountDisplay">₹5,00,000</span>
+                    </div>
+                    <input type="range" id="emiLoanAmount" min="10000" max="10000000" step="10000" value="500000">
+                    <div class="emi-range-values">
+                        <span>₹10,000</span>
+                        <span>₹1 Crore</span>
+                    </div>
+                </div>
+
+                <div class="emi-input-group">
+                    <div class="emi-input-label-row">
+                        <label for="emiInterestRate">Interest Rate</label>
+                        <span id="emiInterestRateDisplay">10.5%</span>
+                    </div>
+                    <input type="range" id="emiInterestRate" min="1" max="30" step="0.1" value="10.5">
+                    <div class="emi-range-values">
+                        <span>1%</span>
+                        <span>30%</span>
+                    </div>
+                </div>
+
+                <div class="emi-input-group">
+                    <div class="emi-input-label-row">
+                        <label for="emiLoanTenure">Loan Tenure</label>
+                        <span id="emiLoanTenureDisplay">5 Years</span>
+                    </div>
+                    <input type="range" id="emiLoanTenure" min="1" max="30" step="1" value="5">
+                    <div class="emi-range-values">
+                        <span>1 Year</span>
+                        <span>30 Years</span>
+                    </div>
+                </div>
+
+                <button type="button" id="emiCalculateBtn" class="emi-calculate-button">Calculate EMI</button>
+            </div>
+
+            <div class="emi-results">
+                <div class="emi-result-heading">
+                    <span>Your Estimated EMI</span>
+                    <strong id="emiMonthlyResult">₹10,747</strong>
+                    <small>per month</small>
+                </div>
+
+                <div class="emi-result-cards">
+                    <div class="emi-result-card">
+                        <span>Loan Amount</span>
+                        <strong id="emiResultPrincipal">₹5,00,000</strong>
+                    </div>
+                    <div class="emi-result-card">
+                        <span>Total Interest</span>
+                        <strong id="emiTotalInterest">₹1,45,000</strong>
+                    </div>
+                    <div class="emi-result-card">
+                        <span>Total Payment</span>
+                        <strong id="emiTotalPayment">₹6,45,000</strong>
+                    </div>
+                </div>
+
+                <div class="emi-breakdown">
+                    <div class="emi-breakdown-header">
+                        <h3>Payment Breakdown</h3>
+                    </div>
+                    <div class="emi-breakdown-bar">
+                        <div id="emiPrincipalBar" class="emi-principal-bar"></div>
+                        <div id="emiInterestBar" class="emi-interest-bar"></div>
+                    </div>
+                    <div class="emi-breakdown-legend">
+                        <div>
+                            <span class="emi-legend-dot emi-principal-dot"></span>
+                            <span>Principal</span>
+                            <strong id="emiPrincipalPercentage">77%</strong>
+                        </div>
+                        <div>
+                            <span class="emi-legend-dot emi-interest-dot"></span>
+                            <span>Interest</span>
+                            <strong id="emiInterestPercentage">23%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="emi-calculator-note">* EMI shown is an indicative
+                    calculation. Actual EMI may vary depending on the lender,
+                    interest rate, fees and other applicable terms.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script
+        src="loan-calculator.js"
+    ></script>
+
+
+</body>
+
+</html>
